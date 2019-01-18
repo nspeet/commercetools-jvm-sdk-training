@@ -42,7 +42,7 @@ public class Exercise3 {
             final Cart cart = cartCreationResult.get();
 
             LOG.info("Created cart {}", cart);
-
+            //NOTE: change "123" to a product key that is published in your project
             final ProductProjection productProjection = client.execute(ProductProjectionByKeyGet.ofCurrent("123"))
                                                               .toCompletableFuture()
                                                               .join();
